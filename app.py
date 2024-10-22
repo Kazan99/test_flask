@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 
 app = Flask(__name__);
 
@@ -6,7 +6,7 @@ app = Flask(__name__);
 def hello_world():
     return 'Hello, World!'
 
-@app.route('/new', methods=['GET'])
+@app.route('/new')
 def img_new():
     return render_template('index.html')
 
